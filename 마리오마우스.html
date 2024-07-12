@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function () {
+            $("html, body").mousemove(function(e){
+                // console.log(e);
+
+                console.log("X : ", e.pageX);
+                console.log("Y : ", e.pageY);
+
+                var x = e.pageX;
+                var y = e.pageY;
+
+                $(".toad").css({top: y , left: x});
+                // $(".toad").css({top: y});
+
+
+            }) //mousemove
+
+
+
+        })
+    </script>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .toad {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            /* float: right; */
+        }
+
+        .toad img{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toad">
+        <img src="img/icon03.png" alt="toad">
+    </div>
+</body>
+
+</html>

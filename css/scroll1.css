@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: azure;
+}
+
+.wrap {}
+
+#header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav,
+.f_nav {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.nav {
+    background-color: rgba(147, 112, 216);
+}
+
+.nav.on {
+    top: -100px !important;
+}
+
+.f_nav {
+    top: -100px !important;
+}
+
+.f_nav.on {
+    top: 0 !important;
+}
+
+.nav ul,
+.f_nav ul {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    /* gap: 100px; */
+}
+
+.nav ul li,
+.f_nav ul li {}
+
+.nav ul li a,
+.f_nav ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 2px white;
+}
+
+
+.container {
+    position: fixed;
+    top: 0;
+}
+
+.container .page {
+    width: 100vw;
+    /* outerWidth값 */
+    height: 100vh;
+    padding: 150px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed gray;
+}
+
+.container .page h1 {
+    font-size: 100px;
+}
+
+
+.btn_group {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+}
+
+.btn_group ul {}
+
+.btn_group ul li {
+    margin-bottom: 15px;
+}
+
+.btn_group ul li a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(196, 235, 235);
+    text-indent: -9999px;
+}
+
+.btn_group ul li.on a{
+    background-color: rgb(96, 190, 192);
+}

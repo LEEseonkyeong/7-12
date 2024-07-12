@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function () {
+            var w1 = $(window).width();
+            console.log("window width : ", w1);
+            
+            $(".p1").text(w1);
+            
+            var h1 = $(window).height();
+            $(".p2").text(h1);
+
+            var p_w = $(".p3").width();
+            $(".p3").text(p_w);
+
+            var p4_w = $(".p4").outerWidth();
+            $(".p4").text(p_w);
+
+            var w_inw = $(window).innerWidth();
+            $(".p5").text(w_inw);
+
+            var w_outw = $(window).outerWidth();
+            $(".p6").text(w_outw);
+
+            var box_w1 = $(".box").outerWidth();
+            $(".box").text(box_w1); // width 500 = 450    500 20 20 5 5
+            // innerWidth 490    500 5 5 
+
+        }) // jQuery
+
+        $(window).resize(function () {
+            var w1 = $(window).width();
+            console.log("window width : ", w1);
+            
+            $(".p1").text(w1);
+            
+            var h1 = $(window).height();
+            $(".p2").text(h1);
+
+            var p_w = $(".p3").width();
+            $(".p3").text(p_w);
+
+            var p4_w = $(".p4").outerWidth();
+            $(".p4").text(p_w);
+
+            var w_inw = $(window).innerWidth();
+            $(".p5").text(w_inw);
+
+            var w_outw = $(window).outerWidth();
+            $(".p6").text(w_outw);
+
+            var box_w1 = $(".box").outerWidth();
+            $(".box").text(box_w1);
+
+
+        }) //window resize
+    </script>
+
+    <style type="text/css">
+        p {
+            width: 80%;
+            border: 2px solid crimson;
+            font-size: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .box{
+            width: 500px;
+            height: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 50px auto;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p1"></p>
+    <p class="p2"></p>
+    <p class="p3"></p>
+    <p class="p4"></p>
+    <p class="p5"></p>
+    <p class="p6"></p>
+
+    <div class="box"></div>
+</body>
+
+</html>

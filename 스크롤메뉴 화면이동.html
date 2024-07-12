@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function () {
+            var off = $(".list3").offset();
+            console.log("off : ", off);
+            
+            var off_top = $(".list3").offset().top;
+            console.log("off_top : ", off_top);
+            
+            var box_off = $(".list3 .box").offset();
+            console.log("box_off : ", box_off);
+            //offset : (웹페이지 전체에서의)top으로부터의 위치
+            
+            var box_pos = $(".list3 .box").position();
+            console.log("box_pos : ", box_pos);
+            //position : 부모로부터의 위치
+
+
+
+
+
+        }) // jQuery
+    </script>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ul li {
+            height: 1000px;
+            border: 5px solid gray;
+            font-size: 100px;
+        }
+
+        .list3 {
+            position: relative;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: darkcyan;
+            position: absolute;
+            top: 200px;
+            left: 600px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li>menu</li>
+            <li>menu</li>
+            <li class="list3">menu
+                <div class="box">box</div>
+            </li>
+            <li>menu</li>
+            <li>menu</li>
+        </ul>
+    </div><!-- wrap -->
+
+</body>
+
+</html>
